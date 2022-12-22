@@ -1,0 +1,30 @@
+.ContainerHome{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ContainerHome button{
+    width: 100px;
+  height: 40px;
+  
+  
+  
+  background: #008800;
+  border-radius: 12px;
+  color: #fff;
+  border: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.ContainerHome button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
