@@ -7,8 +7,9 @@ export function HomePage() {
   return (
     <div className="ContainerHome">
       <h2>Welcome</h2>
-      <a href="/login">
-        <button>Sair</button>
+      <a href="/">
+        <button 
+        >Sair</button>
       </a>
     </div>
   );

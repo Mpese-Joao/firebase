@@ -22,14 +22,17 @@ export function Register() {
 
         console.log("userCredential ", userCredential);
         try {
-          const docRef = await addDoc(collection(db, "jorge"), {
-            first: "joao",
+          const docRef = await addDoc(collection(db, "user"), {
+            first: "fernando",
             email: email,
           });
           console.log("Document written with ID: ", docRef.id);
+          window.location.href = '/home'
         } catch (e) {
+          
           console.error("Error adding document: ", e);
         }
+        
         
         
       })
@@ -40,11 +43,8 @@ export function Register() {
         
       });
   }
-  const navigate = useNavigate();
-  const navigateHome = () => {
-    navigate("/");
-  };
 
+  
  
   
   return (
@@ -76,13 +76,13 @@ export function Register() {
           />
         </div>
 
-        <button onClick={navigateHome} className="button">
+        <button onClick={handleSignOut} className="button">
           Cadastrar
         </button>
 
         <div className="footer">
           <p>Você já tem uma conta?</p>
-          <Link to="/login">Acesse sua conta aqui</Link>
+          <Link to="/">Acesse sua conta aqui</Link>
         </div>
       </form>
     </div>

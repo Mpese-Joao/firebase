@@ -12,12 +12,14 @@ export function Login() {
 
   function handleSignIn(e: any) {
     e.preventDefault();
-    signInWithEmailAndPassword(email, password);
+    signInWithEmailAndPassword(email, password)
+    .then( () => {
+      window.location.href = '/home'
+    
+  });
   }
-  const navigate = useNavigate();
-  const navigateHome = () => {
-    navigate("/");
-  };
+
+  
 
   // if(loading){
   //   return<p>carrengando...</p>
@@ -53,14 +55,12 @@ export function Login() {
         </div>
 
         <a href="#">Esqueceu sua senha ?</a>
-
-        <button className="button" onClick={() => {
-          
-          
-          navigateHome();
-        }}>
+<a href="">
+  <button className="button" onClick={handleSignIn}>
           Entrar
         </button>
+</a>
+        
 
         <div className="footer">
           <p>Você não tem uma conta?</p>
